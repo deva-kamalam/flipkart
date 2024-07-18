@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="dashboard1">
+    <div class="logo2">
+        <img src="{{ url_for('static',filename='images/logo2.png') }}" alt="logo">
+    </div>
+    <div class="search_bar1">
+        <input class="search_input1" type="text" title="Search for Products, Brands and More" placeholder="Search for Products, Brands and More"><i class="fas fa-search search_icon2"></i>
+    </div>
+    <div class="dropdown1">
+        <button class="dropbtn1">Login</button>
+        <div class="dropdown-content1">
+            <a href="#">New customer? <span style="color: blue">Sign Up</span></a>
+            <div class="dropdown-divider1"></div>
+            <a href="#"><i class="fa-regular fa-circle-user dropdown-icon"></i>My Profile</a>
+            <a href="#"><i class="fa-solid fa-square-plus dropdown-icon"></i>Flipkart Plus Zone</a>
+            <a href="#"><i class="fa-solid fa-box dropdown-icon"></i>Orders</a>
+            <a href="#"><i class="fa-regular fa-heart dropdown-icon"></i>Wishlists</a>
+            <a href="#"><i class="fa-solid fa-gift dropdown-icon"></i>Rewards</a>
+            <a href="#"><i class="fa-regular fa-credit-card dropdown-icon"></i>Gift Cards</a>
+        </div>
+    </div>
+    <div class="become-a-seller1">
+        <a href="#" title="Become a seller">Become a seller</a>
+    </div>
+    <div class="dropdown1">
+        <button class="dropbtn1" style="background-color: #2874F0"><a style="color: white">More <i class="fa-solid fa-chevron-down"></i></a></button>
+        <div class="dropdown-content1">
+            <a href="#"><i class="fa-regular fa-bell"></i>Notification Preferences</a>
+            <a href="#"><i class="fa-solid fa-headset"></i>24/7 Customer Care</a>
+            <a href="#"><i class="fa-solid fa-arrow-trend-up"></i>Advertise</a>
+            <a href="#"><i class="fa-solid fa-download"></i>Download App</a>
+        </div>
+    </div>
+    <div class="cart1">
+        <a href="#" title="Cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="dashboard">
+    <div class="logo1">
+        <img src="{{ url_for('static',filename='images/flipkart_logo1.svg') }}" alt="logo">
+    </div>
+    <div class="search_bar">
+        <i class="fas fa-search search_icon"></i>
+        <input class="search_input" type="text" title="Search for Products, Brands and More" placeholder="Search for Products, Brands and More">
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fa-regular fa-circle-user"></i>Login<i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+            <a href="#">New customer? <span style="color: blue">Sign Up</span></a>
+            <div class="dropdown-divider"></div>
+            <a href="#"><i class="fa-regular fa-circle-user dropdown-icon"></i>My Profile</a>
+            <a href="#"><i class="fa-solid fa-square-plus dropdown-icon"></i>Flipkart Plus Zone</a>
+            <a href="#"><i class="fa-solid fa-box dropdown-icon"></i>Orders</a>
+            <a href="#"><i class="fa-regular fa-heart dropdown-icon"></i>Wishlists</a>
+            <a href="#"><i class="fa-solid fa-gift dropdown-icon"></i>Rewards</a>
+            <a href="#"><i class="fa-regular fa-credit-card dropdown-icon"></i>Gift Cards</a>
+        </div>
+    </div>
+    <div class="cart">
+        <a href="#" title="Cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+    </div>
+    <div class="become-a-seller">
+        <a href="#" title="Become a seller"><i class="fa-solid fa-store"></i>Become a seller</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        <div class="dropdown-content">
+            <a href="#"><i class="fa-regular fa-bell"></i>Notification Preferences</a>
+            <a href="#"><i class="fa-solid fa-headset"></i>24/7 Customer Care</a>
+            <a href="#"><i class="fa-solid fa-arrow-trend-up"></i>Advertise</a>
+            <a href="#"><i class="fa-solid fa-download"></i>Download App</a>
+        </div>
+    </div>
+</div>
+<div class="home-products">
+    <div class="home-category">
+        <div><img src="{{ url_for('static',filename='category_images/grocery.png') }}" alt="Grocery"><span>Grocery</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/mobile.png') }}" alt="Mobiles"><span>Mobiles</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/fashion.png') }}" alt="Fashion"><span>Fashion</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/electronics.png') }}" alt="Electronics"><span>Electronics</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/home_furniture.jpg') }}" alt="Home & Furniture"><span>Home & Furniture</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/appliances.jpg') }}" alt="Appliances"><span>Appliances</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/travel.png') }}" alt="Travel"><span>Travel</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/toy.png') }}" alt="Beauty, Toys & More"><span>Beauty, Toys & More</span></div>
+        <div><img src="{{ url_for('static',filename='category_images/two_wheelers.png') }}" alt="Two Wheelers"><span>Two Wheelers</span></div>
+    </div>
+    <div class="long-image">
+        <div class="arrow1"><i class="fa-solid fa-angle-left"></i></div>
+        <div><img src="{{ url_for('static',filename='category_images/long_image.jpg') }}" alt="long_image"></div>
+        <div class="dot1">
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+            <i class="fa-solid fa-circle" style="color: white"></i>
+        </div>
+        <div class="arrow2"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+</div>
+<div class="sbi">
+    <img src="{{ url_for('static',filename='images/sbi.webp') }}" alt="sbi">
+</div>
+<div class="products">
+    <div class="electronics-main">
+        <div class="electronics1">
+            <div class="title">
+                <span>Best of Electronics</span>
+                <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+            </div>
+            <div class="electronics-items">
+                <div class="item">
+                    <img src="{{ url_for('static',filename='electronics/camera.jpeg') }}" alt="camera">
+                    <span>
+                        <span class="product-name">Canon 400</span><br>
+                        <span class="product-price">Just ₹46,990</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='electronics/watch1.jpeg') }}" alt="watch1">
+                    <span>
+                        <span class="product-name">Analog Watches</span><br>
+                        <span class="product-price">Just ₹1,890</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='electronics/earbuds.jpeg') }}" alt="earbuds">
+                    <span>
+                        <span class="product-name">OnePlus Earbuds</span><br>
+                        <span class="product-price">Just ₹5,670</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='electronics/speaker.jpeg') }}" alt="speaker">
+                    <span>
+                        <span class="product-name">JBL Flip 6</span><br>
+                        <span class="product-price">Just ₹9,990</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='electronics/tv.jpeg') }}" alt="tv">
+                    <span>
+                        <span class="product-name">Frontech Ultima Series</span><br>
+                        <span class="product-price">Just ₹6,600</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="airplain">
+        <img src="{{ url_for('static',filename='electronics/plane.jpg') }}" alt="plane">
+    </div>
+</div>
+<div class="images-3-at-once">
+    <img src="{{ url_for('static',filename='images2/moto.jpg') }}" alt="moto">
+    <img src="{{ url_for('static',filename='images2/tv.jpg') }}" alt="tv">
+    <img src="{{ url_for('static',filename='images2/laptop.jpg') }}" alt="laptop">
+</div>
+<div class="heading">
+    <div class="title">
+        <span>Best of Fashion</span>
+        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+    <div class="all-items">
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/dress.jpeg') }}" alt="dress">
+            <span>
+                <span class="product-name">Dresses, Tops, Jeans...</span>
+                <span class="product-price">50-80% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/kids.jpeg') }}" alt="kids">
+            <span>
+                <span class="product-name">Kids' Combosets</span>
+                <span class="product-price">Min. 75% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/belt.jpeg') }}" alt="belt">
+            <span>
+                <span class="product-name">Wallets & Belts</span>
+                <span class="product-price">Min 70% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/shoe.jpeg') }}" alt="shoe">
+            <span>
+                <span class="product-name">Paragon, Denill, Myra...</span>
+                <span class="product-price">Under ₹499</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/dress1.jpeg') }}" alt=dress1">
+            <span>
+                <span class="product-name">Super Offers On Kurtas & Sets</span>
+                <span class="product-price">Under ₹599</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='image_fashion/shoe1.jpeg') }}" alt="shoe1">
+            <span>
+                <span class="product-name">Adidas, Puma & more</span>
+                <span class="product-price">Min 50% Off</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="images-3-at-once">
+    <img src="{{ url_for('static',filename='images2/galaxy.jpg') }}" alt="galaxy">
+    <img src="{{ url_for('static',filename='images2/grab.jpg') }}" alt="grab">
+    <img src="{{ url_for('static',filename='images2/raymond.jpg') }}" alt="raymond">
+</div>
+<div class="featured-brands">
+    <div class="title-featured"><span>Featured Brands</span></div>
+    <div class="featured-images">
+        <img src="{{ url_for('static',filename='featured-brands-1/boult.jpeg') }}" alt="boult">
+        <img src="{{ url_for('static',filename='featured-brands-1/noise.jpeg') }}" alt="noise">
+        <img src="{{ url_for('static',filename='featured-brands-1/boat.jpeg') }}" alt="boat">
+    </div>
+    <div class="images-3-featured">
+        <img src="{{ url_for('static',filename='featured-brands-1/dove.jpg') }}" alt="dove">
+        <img src="{{ url_for('static',filename='featured-brands-1/raymond.jpg') }}" alt="raymond">
+        <img src="{{ url_for('static',filename='featured-brands-1/sleepyhead.jpg') }}" alt="sleepyhead">
+    </div>
+</div>
+<div class="heading">
+    <div class="title">
+        <span>Electronic Gadgets</span>
+        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+    <div class="all-items">
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/cable.jpeg') }}" alt="cable">
+            <span>
+                <span class="product-name">Mobile Cables</span>
+                <span class="product-price">From ₹49</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/watch.jpg') }}" alt="watch">
+            <span>
+                <span class="product-name">Calling Smartwatches</span>
+                <span class="product-price">From ₹799</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/ps5.jpeg') }}" alt="ps5">
+            <span>
+                <span class="product-name">Gaming Consoles</span>
+                <span class="product-price">From ₹17,990*</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/speaker.jpeg') }}" alt="speaker">
+            <span>
+                <span class="product-name">Best Of Soundbars</span>
+                <span class="product-price">Shop Now</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/controller.jpeg') }}" alt="controller">
+            <span>
+                <span class="product-name">Gaming Consoles</span>
+                <span class="product-price">From ₹516,990*</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='electronics1/headphone.jpeg') }}" alt="headphones">
+            <span>
+                <span class="product-name">Bluetooth Headphones</span>
+                <span class="product-price">From ₹699</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="heading">
+    <div class="title">
+        <span>Best Fashion Brands For You</span>
+        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+    <div class="all-items">
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic1.jpeg') }}" alt="pic">
+            <span>
+                <span class="product-name">Metro, Mochi...</span>
+                <span class="product-price">Under ₹999</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic2.jpg') }}" alt="pic">
+            <span>
+                <span class="product-name">Sabse Badi Deals</span>
+                <span class="product-price"> Min 70% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic3.jpeg') }}" alt="pic">
+            <span>
+                <span class="product-name">Mobile Pouches</span>
+                <span class="product-price"> From ₹99</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic4.jpg') }}" alt="pic">
+            <span>
+                <span class="product-name">Branded Kurtas</span>
+                <span class="product-price"> From ₹399</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic5.jpeg') }}" alt="pic">
+            <span>
+                <span class="product-name">Metroaut, Adrenex...</span>
+                <span class="product-price">Under 345/-</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='fashion1/pic6.jpeg') }}" alt="pic">
+            <span>
+                <span class="product-name">Discounts You can't Miss!</span>
+                <span class="product-price">Min 60%+ Extra 10% Off</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="gaming">
+    <div class="heading">
+        <div class="title">
+            <span class="gamin">Top Gaming</span>
+            <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+        </div>
+        <div class="all1">
+            <div class="all-items">
+                <div class="item">
+                    <img src="{{ url_for('static',filename='gaming/button.jpeg') }}" alt="gaming">
+                    <span>
+                        <span class="product-name">POSTERITY New arrival</span>
+                        <span class="product-price"> 60% Off</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='gaming/lap1.jpeg') }}" alt="gaming">
+                    <span>
+                        <span class="product-name">Acer Predator Neo</span>
+                        <span class="product-price"> ₹89,990</span>
+                    </span>
+                </div>
+            </div>
+            <div class="all-items">
+                <div class="item">
+                    <img src="{{ url_for('static',filename='gaming/thumb.jpeg') }}" alt="gaming">
+                    <span>
+                        <span class="product-name">Controller Finger Cots</span>
+                        <span class="product-price"> Under ₹199</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='gaming/lap2.jpeg') }}" alt="gaming">
+                    <span>
+                        <span class="product-name">Lenovo LOQ</span>
+                        <span class="product-price"> ₹82,990</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="big-image1">
+        <img src="{{ url_for('static',filename='gaming/mobile.png') }}" alt="mobile">
+    </div>
+</div>
+<div class="images-3-at-once">
+    <img src="{{ url_for('static',filename='images3/fridge.jpg') }}" alt="fridge">
+    <img src="{{ url_for('static',filename='images3/phone.jpg') }}" alt="phone">
+    <img src="{{ url_for('static',filename='images3/bed.jpg') }}" alt="bed">
+</div>
+<div class="images-3-at-once">
+    <img src="{{ url_for('static',filename='images3/cycle.jpg') }}" alt="cycle">
+    <img src="{{ url_for('static',filename='images3/car.jpg') }}" alt="car">
+    <img src="{{ url_for('static',filename='images3/horlicks.jpg') }}" alt="horlicks">
+</div>
+<div class="images-3-at-once">
+    <img src="{{ url_for('static',filename='images3/trim.jpg') }}" alt="trim">
+    <img src="{{ url_for('static',filename='images3/watch.jpeg') }}" alt="watch">
+    <img src="{{ url_for('static',filename='images3/tab.jpeg') }}" alt="tab">
+</div>
+<div class="featured-brands">
+    <div class="title-featured"><span>Featured Brands</span></div>
+    <div class="featured-images">
+        <img src="{{ url_for('static',filename='featured-brands-2/gurl.jpeg') }}" alt="girl">
+        <img src="{{ url_for('static',filename='featured-brands-2/bag.jpeg') }}" alt="bag">
+        <img src="{{ url_for('static',filename='featured-brands-2/off.webp') }}" alt="off">
+    </div>
+    <div class="images-3-featured">
+        <img src="{{ url_for('static',filename='featured-brands-2/wash.jpg') }}" alt="wash">
+        <img src="{{ url_for('static',filename='featured-brands-2/dish.jpg') }}" alt="dish">
+        <img src="{{ url_for('static',filename='featured-brands-2/curtains.jpg') }}" alt="curtains">
+    </div>
+</div>
+<div class="img4">
+    <img src="{{ url_for('static',filename='featured-brands-2/1.jpg') }}" alt="1">
+    <img src="{{ url_for('static',filename='featured-brands-2/2.jpg') }}" alt="2">
+    <img src="{{ url_for('static',filename='featured-brands-2/3.jpg') }}" alt="3">
+    <img src="{{ url_for('static',filename='featured-brands-2/4.jpg') }}" alt="4">
+</div>
+<div class="big-divs">
+    <div class="tab3">
+        <div class="heading">
+            <div class="title">
+                <span class="furnishing">Home Decor & Furnishing</span>
+                <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+            </div>
+            <div class="all2">
+                <div class="all-items">
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/11.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Torches</span>
+                            <span class="product-price">Min 50% Off</span>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/12.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Wall Clocks</span>
+                            <span class="product-price">Trending</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="all-items">
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/13.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Bulbs</span>
+                            <span class="product-price">Min 50% Off</span>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/14.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Key Holders </span>
+                            <span class="product-price"> Top Picks</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab3">
+        <div class="heading">
+            <div class="title">
+                <span class="furnishing">Yoga Days Must-Haves</span>
+                <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+            </div>
+            <div class="all2">
+                <div class="all-items">
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/21.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Men's T-Shirt</span>
+                            <span class="product-price"> Special Offers</span>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/22.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Smart Watches</span>
+                            <span class="product-price"> min 40% Off</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="all-items">
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/23.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Mats</span>
+                            <span class="product-price">Min 60% Off</span>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="{{ url_for('static',filename='big3/24.jpeg') }}" alt="img">
+                        <span>
+                            <span class="product-name">Men's Tracksuits</span>
+                            <span class="product-price"> Special Offers</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="big-image2">
+            <img src="{{ url_for('static',filename='big3/big.jpg') }}" alt="img">
+        </div>
+</div>
+<div class="heading">
+    <div class="title">
+        <span>Deals</span>
+        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+    <div class="all-items">
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/gurl1.jpeg') }}" alt="">
+            <span>
+                <span class="product-name">Dresses, Tops, Jeans...</span>
+                <span class="product-price">60-80% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/1-2years.jpeg') }}" alt="">
+            <span>
+                <span class="product-name">Kids' Combosets</span>
+                <span class="product-price">Min 60% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/gurl2.jpeg') }}" alt="">
+            <span>
+                <span class="product-name">Tops, Trousers, Nightsuits...</span>
+                <span class="product-price">Under ₹599</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/kids.jpg') }}" alt="">
+            <span>
+                <span class="product-name">Kids' clothing</span>
+                <span class="product-price">Min 60% Off</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/gurl.jpeg') }}" alt="">
+            <span>
+                <span class="product-name">Girls' Dress</span>
+                <span class="product-price">Min 80% Off </span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='deals/glass.jpeg') }}" alt="">
+            <span>
+                <span class="product-name">Sunglasses</span>
+                <span class="product-price">From ₹499</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="gaming">
+    <div class="heading">
+        <div class="title">
+            <span class="gamin">Best Of Health & Wellness</span>
+            <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+        </div>
+        <div class="all1">
+            <div class="all-items">
+                <div class="item">
+                    <img src="{{ url_for('static',filename='health/bottle.jpeg') }}" alt="health">
+                    <span>
+                        <span class="product-name">Water Bottles & Flasks</span>
+                        <span class="product-price">Top Sellers</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='health/cycle.jpeg') }}" alt="health">
+                    <span>
+                        <span class="product-name">Kids Cycles</span>
+                        <span class="product-price"> Min. 50% Off</span>
+                    </span>
+                </div>
+            </div>
+            <div class="all-items">
+                <div class="item">
+                    <img src="{{ url_for('static',filename='health/nut.jpeg') }}" alt="health">
+                    <span>
+                        <span class="product-name">Dry Fruit, Nut & Seed</span>
+                        <span class="product-price">Min. 50% Off</span>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static',filename='health/shoe1.jpeg') }}" alt="health">
+                    <span>
+                        <span class="product-name">Men's Sports Shoes</span>
+                        <span class="product-price"> Min. 70% Off</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="big-image1">
+        <img src="{{ url_for('static',filename='health/plane.jpg') }}" alt="health">
+    </div>
+</div>
+<div class="heading">
+    <div class="title">
+        <span>Top Deals On TVs & Appliances</span>
+        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+    <div class="all-items">
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/1.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Semi Automatic Washing Machines</span>
+                <span class="product-price"> From ₹ 6,990</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/2.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Godrej Refrigerator</span>
+                <span class="product-price"> From ₹7,240</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/3.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Front load Washing Machines</span>
+                <span class="product-price"> From ₹17,990</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/4.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Single Door Refrigerator</span>
+                <span class="product-price"> From ₹9,990</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/5.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Samsung Refrigerator</span>
+                <span class="product-price"> From ₹12,680</span>
+            </span>
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static',filename='furnish/6.jpeg') }}" alt="img">
+            <span>
+                <span class="product-name">Double Door Refrigerator</span>
+                <span class="product-price"> From ₹16,129</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="paras">
+    <h1 class="heading1">Flipkart: The One-stop Shopping Destination</h1>
+    <div class="para">
+        E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down.<br><br>What's more, with our year-round shopping festivals and events, our prices are irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering why you should shop from Flipkart when there are multiple options available to you, well, the below will answer your question.<br><br>
+    </div>
+    <h1 class="heading1">Flipkart Plus</h1>
+    <div class="para">
+        A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4 supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and shopping festivals, exchange offers and priority customer service are the top benefits to a Flipkart Plus member. In short, earn more when you shop more!
+        <br><br>What's more, you can even use the Flipkart supercoins for a number of exciting services, like:<br>
+        An annual Zomato Gold membership<br>
+        An annual Hotstar Premium membership<br>
+        6 months Gaana plus subscription<br>
+        Rupees 550 instant discount on flights on ixigo<br>
+        Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms and conditions apply.
+        <br><br>
+    </div>
+    <h1 class="heading1">No Cost EMI</h1>
+    <div class="para">
+        In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops, large and small appliances, furniture, electronics and watches, you can now shop without burning a hole in your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.<br><br>
+    </div>
+    <h1 class="heading1">EMI on Debit Cards</h1>
+    <div class="para">
+        Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop confidently with us without having to worry about pauses in monthly cash flow. At present, we have partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More power to all our shoppers! Terms and conditions apply.<br><br>
+    </div>
+    <h1 class="heading1">Mobile Exchange Offers</h1>
+    <div class="para">
+        Get an instant discount on the phone that you have been eyeing on. Exchange your old mobile for a new one after the Flipkart experts calculate the value of your old phone, provided it is in a working condition without damage to the screen. If a phone is applicable for an exchange offer, you will see the 'Buy with Exchange' option on the product description of the phone. So, be smart, always opt for an exchange wherever possible. Terms and conditions apply. <br><br>
+    </div>
+    <h1 class="heading1">What Can You Buy From Flipkart?<br>Mobile Phones</h1>
+    <div class="para">
+        From budget phones to state-of-the-art smartphones, we have a mobile for everybody out there. Whether you're looking for larger, fuller screens, power-packed batteries, blazing-fast processors, beautification apps, high-tech selfie cameras or just large internal space, we take care of all the essentials. Shop from top brands in the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and Honor to name a few. Rest assured, you're buying from only the most reliable names in the market. What's more, with Flipkart's Complete Mobile Protection Plan, you will never again find the need to run around service centres. This plan entails you to a number of post-purchase solutions, starting at as low as Rupees 99 only! Broken screens, liquid damage to phone, hardware and software glitches, and replacements - <b>the Flipkart Complete Mobile Protection</b> covers a comprehensive range of post-purchase problems, with door-to-door services. <br><br>
+    </div>
+    <h1 class="heading1">Electronic Devices and Accessories</h1>
+    <div class="para">
+    </div>
+    <h1 class="heading1"></h1>
+    <div class="para">
+        When it comes to laptops, we are not far behind. Filter among dozens of super-fast operating systems, hard disk capacity, RAM, lifestyle, screen size and many other criterias for personalized results in a flash. All you students out there, confused about what laptop to get? Our <b>Back To College Store</b> segregates laptops purpose wise (gaming, browsing and research, project work, entertainment, design, multitasking) with recommendations from top brands and industry experts, facilitating a shopping experience that is quicker and simpler.<br><br>
+        Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. <br><br>
+        Turn your home into a theatre with a stunning surround sound system. Choose from our elaborate range of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to remember.<br><br>
+        How about jazzing up your phone with our quirky designer cases and covers? Our wide-ranging mobile accessories starting from headphones, power banks, memory cards, mobile chargers, to selfie sticks can prove to be ideal travel companions for you and your phone; never again worry about running out of charge or memory on your next vacation.<br><br>
+    </div>
+    <h1 class="heading1">Large Appliances</h1>
+    <div class="para">
+        Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines - discover everything you need to run a house under one roof. Our <b>Dependable TV and Appliance Store</b> ensures zero transit damage, with a replacement guarantee if anything goes wrong; delivery and installation as per your convenience and a double warranty (Official Brand Warranty along with an extended Flipkart Warranty) - rest assured, value for money is what is promised and delivered. Shop from market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi, Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.<br><br>
+        For certain product categories, Customers meeting the eligibility criteria will have the option to buy larger quantities. To know more on the eligibility criteria and terms and conditions, please reach out to Purchases.oni@flipkart.com.<br><br>
+    </div>
+    <h1 class="heading1">Small Home Appliances</h1>
+    <div class="para">
+        Find handy and practical home appliances designed to make your life simpler: electric kettles, OTGs, microwave ovens, sandwich makers, hand blenders, coffee makers, and many more other time-saving appliances that are truly crafted for a quicker lifestyle. Live life king size with these appliances at home.<br><br>
+    </div>
+    <h1 class="heading1">Lifestyle</h1>
+    <div class="para">
+        Lifestyle <b>'India ka Fashion Capital'</b>, is your one-stop fashion destination for anything and everything you need to look good. Our exhaustive range of Western and Indian wear, summer and winter clothing, formal and casual footwear, bridal and artificial jewellery, long-lasting make-up, grooming tools and accessories are sure to sweep you off your feet. Shop from crowd favourites like Vero Moda, Forever 21, Only, Arrow, Woodland, Nike, Puma, Revlon, Mac, and Sephora among dozens of other top-of-the-ladder names. From summer staple maxi dresses, no-nonsense cigarette pants, traditional Bandhani kurtis to street-smart biker jackets, you can rely on us for a wardrobe that is up to date. Explore our in-house brands like Metronaut, Anmi, and Denizen, to name a few, for carefully curated designs that are the talk of the town. Get ready to be spoiled for choice.Festivals, office get-togethers, weddings, brunches, or nightwear - Flipkart will have your back each time.<br><br>
+    </div>
+    <h1 class="heading1">Home and Furniture</h1>
+    <div class="para">
+        Moving to a new place is never easy, especially if you're buying new furniture. Beds, sofa sets, dining tables, wardrobes, and TV units - it's not easy to set up everything again. With the hundreds of options thrown at you, the ride could be overwhelming. What place is reliable, what furniture will stand the test of time? These are questions you must ask before you choose a store. Well, our <b>Durability Certified Furniture Store</b> has not only curated a range of furniture keeping in mind the modern Indian consumer but furniture that comes with a lab certification, ensuring they last you for up to 10 years. Yes, all our furniture has gone through 35 stability and load tests so that you receive only the best-quality furniture.<b>Be FurniSure</b>, always. Names to look out for are Nilkamal, Godrej Interio, Urban Ladder, HomeTown, Durian and Perfect Homes. <br><br>
+        You may have your furniture all set up, but they could end up looking flat and incomplete without complementary decor. Curtains, cushion covers, bed sheets, wall shelves, paintings, floor lamps - find everything that turns a house to an inviting home under one roof at Flipkart. <br><br>
+    </div>
+    <h1 class="heading1">Baby and Kids</h1>
+    <div class="para">
+        Your kids deserve only the best. From bodysuits, booties, diapers to strollers, if you're an expecting mother or a new mother, you will find everything you need to set sail on a smooth parenting journey with the help of our baby care collection. When it comes to safety, hygiene and comfort, you can rely on us without a second thought. Huggies, Pampers, MamyPoko, and Johnson & Johnson: we host only the most-trusted names in the business for your baby.<br><br>
+    </div>
+    <h1 class="heading1">Books, Sports and Games</h1>
+    <div class="para">
+        Work hard and no play? We don't believe in that. Get access to best-selling fiction and non-fiction books by your favourite authors, thrilling English and Indian blockbusters, most-wanted gaming consoles, and a tempting range of fitness and sports gadgets and equipment bound to inspire you to get moving. <br><br>
+    </div>
+    <h1 class="heading1">Grocery/Supermart</h1>
+    <div class="para">
+        Launching into the grocery vertical, Flipkart introduces <b>Supermart</b> that is out to bring everyday essentials close to you. From pulses, spices, dairy, personal and sanitary care, breakfast essentials, health drinks, spreads, ready to cook, grooming to cleaning agents, we are happy to present everything you need to run a house. Now buy Grocery products for as low as 1 Rupee only - our <b>1 Rupee Store</b> presents new products every day for a nominal price of 1 Rupee only. Terms and conditions apply.<br><br>
+    </div>
+</div>
+<div class="final">
+    <div class="all-head">
+        <div class="final-head">
+            <a>ABOUT</a><br>
+            <a>Contact Us</a>
+            <a>About Us</a>
+            <a>Careers</a>
+            <a>Flipkart Stories</a>
+            <a>Press</a>
+            <a>Corporate Information</a>
+        </div>
+        <div class="final-head">
+            <a>GROUP COMPANIES</a><br>
+            <a>Myntra</a>
+            <a>Clear Trip</a>
+            <a>Shopsy</a>
+        </div>
+        <div class="final-head">
+            <a>HELP</a><br>
+            <a>Payment</a>
+            <a>Shipping</a>
+            <a>Cancellation & Returns</a>
+            <a>FAQ</a>
+            <a>Report Infringement</a>
+        </div>
+        <div class="final-head">
+            <a>Report Infringement</a><br>
+            <a>Cancellation & Returns</a>
+            <a>Terms Of Uses</a>
+            <a>Security</a>
+            <a>Privacy</a>
+            <a>Site Map</a>
+            <a>Grievance Redressal</a>
+            <a>EPR Compliance</a>
+        </div>
+        <div class="final-head">
+            <a></a><br>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+        <div class="final-head">
+            <a></a><br>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+{##}
+{#<div class="heading">#}
+{#    <div class="title">#}
+{#        <span></span>#}
+{#        <div class="arrow3"><i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>#}
+{#    </div>#}
+{#    <div class="all-items">#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#        <div class="item">#}
+{#            <img src="{{ url_for('static',filename='/.jpeg') }}" alt="">#}
+{#            <span>#}
+{#                <span class="product-name"></span>#}
+{#                <span class="product-price"> ₹</span>#}
+{#            </span>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+
+{##}
+{#<div class="images-3-at-once">#}
+{#    <img src="{{ url_for('static',filename='images/.jpg') }}" alt="img">#}
+{#    <img src="{{ url_for('static',filename='images/.jpg') }}" alt="img">#}
+{#    <img src="{{ url_for('static',filename='images/.jpg') }}" alt="img">#}
+{#</div>#}
+
+
+
+{#<div class="featured-brands">#}
+{#    <div class="title-featured"><span>Featured Brands</span></div>#}
+{#    <div class="featured-images">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#    </div>#}
+{#    <div class="images-3-featured">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#        <img src="{{ url_for('static',filename='featured-brands-/.jpg') }}" alt="img">#}
+{#    </div>#}
+{#</div>#}
